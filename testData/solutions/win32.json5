@@ -1633,6 +1633,7 @@
                     "filename": "firefox.exe"
             }
         ],
+        "configure": [ "settings.configure" ],
         "isInstalled": [
             {
                 "type": "gpii.deviceReporter.alwaysInstalled"

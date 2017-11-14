@@ -149,6 +149,14 @@
 
     {
         "id": "net.gpii.uioPlus"
+    },
+
+    {
+        "id": "trace.easyOne.communicator.windows"
+    },
+
+    {
+        "id": "org.nvda-project"
     }
 
 ]
