@@ -1,0 +1,33 @@
+{
+    "flat": {
+        "name": "Sven",
+        "contexts": {
+            "gpii-default": {
+                "name": "Default preferences",
+                "preferences": {
+                    "http://registry.gpii.net/applications/com.microsoft.windows.classicShell": {
+                        "MenuStyle": "Win7",
+                        "SkipMetro": 1,
+                        "SkinW7": "Windows Aero"
+                    },
+                    "http://registry.gpii.net/applications/com.microsoft.windows.taskbar": {
+                        "SearchboxTaskbarMode": 0
+                    },
+                    "http://registry.gpii.net/applications/com.microsoft.windows.taskView": {
+                        "ShowTaskViewButton": 0
+                    },
+                    "http://registry.gpii.net/applications/com.microsoft.windows.lockScreen": {
+                        "NoLockScreen": 1
+                    },
+                    "http://registry.gpii.net/applications/com.microsoft.windows.titleBarColor": {
+                        "ColorPrevalence": 1
+                    },
+                    "http://registry.gpii.net/applications/com.microsoft.windows.taskBarColor": {
+                        "ColorPrevalence": 1
+                    },
+                    "http://registry.gpii.net/common/wallpaper": "${{environment}.HOMEDRIVE}${{environment}.HOMEPATH}\\AppData\\Local\\GPII\\wallpapers\\img0.jpg"
+                }
+            }
+        }
+    }
+}

@@ -56,19 +56,15 @@
     },
 
     {
-        "id": "com.microsoft.windows.stickyKeys"
-    },
-
-    {
-        "id": "com.microsoft.windows.filterKeys"
-    },
-
-    {
-        "id": "com.microsoft.windows.mouseKeys"
-    },
-
-    {
         "id": "com.microsoft.windows.mouseTrailing"
+    },
+
+    {
+        "id": "com.microsoft.windows.cursors"
+    },
+
+    {
+        "id": "com.microsoft.windows.screenResolution"
     },
 
     {
@@ -80,7 +76,47 @@
     },
 
     {
-        "id": "com.microsoft.windows.screenResolution"
+        "id": "com.microsoft.windows.classicShell"
+    },
+
+    {
+        "id": "com.microsoft.windows.taskbar"
+    },
+
+    {
+        "id": "com.microsoft.windows.taskView"
+    },
+
+    {
+        "id": "com.microsoft.windows.lockScreen"
+    },
+
+    {
+        "id": "com.microsoft.windows.titleBarColor"
+    },
+
+    {
+        "id": "com.microsoft.windows.taskBarColor"
+    },
+
+    {
+        "id": "com.microsoft.windows.wallpaper"
+    },
+
+    {
+        "id": "com.microsoft.windows.taskBarAppsVisibleInTabletMode"
+    },
+
+    {
+        "id": "com.microsoft.windows.taskBarAutoHideInTabletMode"
+    },
+
+    {
+        "id": "com.microsoft.windows.customStartMenu"
+    },
+
+    {
+        "id": "com.microsoft.windows.immersiveMode"
     },
 
     {

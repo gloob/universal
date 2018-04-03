@@ -11,6 +11,7 @@
         "settingsHandlers": {
             "configuration1": {
                 "type": "gpii.settingsHandlers.INISettingsHandler",
+                "liveness": "manualRestart",
                 "options": {
                     "filename": "${{environment}.APPDATA}\\Freedom Scientific\\JAWS\\17.0\\Settings\\enu\\DEFAULT.JCF"
                 },
@@ -205,6 +206,7 @@
             },
             "configuration2": {
                 "type": "gpii.settingsHandlers.INISettingsHandler",
+                "liveness": "manualRestart",
                 "options": {
                     "filename": "${{environment}.APPDATA}\\Freedom Scientific\\JAWS\\17.0\\Settings\\VoiceProfiles\\GPII.VPF"
                 },
@@ -669,6 +671,7 @@
         "settingsHandlers": {
             "configuration": {
                 "type": "gpii.settingsHandlers.XMLHandler",
+                "liveness": "manualRestart",
                 "options": {
                     "filename": "${{environment}.APPDATA}\\Texthelp\\ReadAndWrite\\11\\RWSettings11.xml",
                     "encoding": "utf-8",
@@ -757,6 +760,7 @@
         "settingsHandlers": {
             "configure": {
                 "type": "gpii.windows.registrySettingsHandler",
+                "liveness": "liveRestart",
                 "options": {
                     "hKey": "HKEY_CURRENT_USER",
                     "path": "Software\\Microsoft\\ScreenMagnifier",
@@ -961,6 +965,7 @@
         "settingsHandlers": {
             "configure": {
                 "type": "gpii.windows.registrySettingsHandler",
+                "liveness": "liveRestart",
                 "options": {
                     "hKey": "HKEY_CURRENT_USER",
                     "path": "Software\\Microsoft\\Osk",
@@ -1035,6 +1040,7 @@
         "settingsHandlers": {
             "configure": {
                 "type": "gpii.windows.registrySettingsHandler",
+                "liveness": "liveRestart",
                 "options": {
                     "hKey": "HKEY_CURRENT_USER",
                     "path": "Software\\Microsoft\\Narrator",
@@ -1311,6 +1317,7 @@
         "settingsHandlers": {
             "configs": {
                 "type": "gpii.settingsHandlers.INISettingsHandler",
+                "liveness": "manualRestart",
                 "options": {
                     "filename": "${{environment}.APPDATA}\\nvda\\nvda.ini",
                     "allowNumberSignComments": true,
@@ -1886,6 +1893,7 @@
         "settingsHandlers": {
             "configuration": {
                 "type": "gpii.settingsHandlers.JSONSettingsHandler",
+                "liveness": "manualRestart",
                 "options": {
                     "filename": "${{environment}.MAAVIS_HOME}\\MaavisMedia\\Users\\Default\\userconfig.json"
                 },
@@ -1991,6 +1999,7 @@
         "settingsHandlers": {
             "configure": {
                 "type": "gpii.windows.spiSettingsHandler",
+                "liveness": "live",
                 "options": {
                     "getAction": "SPI_GETHIGHCONTRAST",
                     "setAction": "SPI_SETHIGHCONTRAST",
@@ -2035,6 +2044,7 @@
             },
             "configureTheme": {
                 "type": "gpii.windows.registrySettingsHandler",
+                "liveness": "live",
                 "options": {
                     "hKey": "HKEY_CURRENT_USER",
                     "path": "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes",
@@ -2109,6 +2119,7 @@
         "settingsHandlers": {
             "configure": {
                 "type": "gpii.windows.spiSettingsHandler",
+                "liveness": "live",
                 "options": {
                     "getAction": "SPI_GETSTICKYKEYS",
                     "setAction": "SPI_SETSTICKYKEYS",
@@ -2137,6 +2148,9 @@
                             }
                         }
                     }
+                },
+                "inverseCapabilitiesTransformations": {
+                    "http://registry\\.gpii\\.net/common/stickyKeys": "StickyKeysOn.value"
                 }
             }
         },
@@ -2169,6 +2183,7 @@
         "settingsHandlers": {
             "configure": {
                 "type": "gpii.windows.spiSettingsHandler",
+                "liveness": "live",
                 "options": {
                     "getAction": "SPI_GETFILTERKEYS",
                     "setAction": "SPI_SETFILTERKEYS",
@@ -2386,6 +2401,7 @@
         "settingsHandlers": {
             "configure": {
                 "type": "gpii.windows.spiSettingsHandler",
+                "liveness": "live",
                 "options": {
                     "getAction": "SPI_GETMOUSEKEYS",
                     "setAction": "SPI_SETMOUSEKEYS",
@@ -2531,6 +2547,7 @@
         "settingsHandlers": {
             "configure": {
                 "type": "gpii.windows.spiSettingsHandler",
+                "liveness": "live",
                 "options": {
                     "getAction": "SPI_GETMOUSETRAILS",
                     "setAction": "SPI_SETMOUSETRAILS",
@@ -2572,6 +2589,9 @@
                             }
                         }
                     }
+                },
+                "inverseCapabilitiesTransformations": {
+                    "http://registry\\.gpii\\.net/common/mouseTrailing": "MouseTrails.value"
                 }
             }
         },
@@ -2604,6 +2624,7 @@
         "settingsHandlers": {
             "configuration": {
                 "type": "gpii.windows.displaySettingsHandler",
+                "liveness": "liveRestart",
                 "capabilities": [
                     "display.screenEnhancement.screenResolution",
                     "applications.com\\.microsoft\\.windows\\.screenResolution.id"
@@ -2646,6 +2667,7 @@
         "settingsHandlers": {
             "configure": {
                 "type": "gpii.windows.displaySettingsHandler",
+                "liveness": "live",
                 "supportedSettings": {
                     "screen-dpi": {}
                 },
@@ -2698,6 +2720,7 @@
         "settingsHandlers": {
             "configure": {
                 "type": "gpii.windows.registrySettingsHandler",
+                "liveness": "liveRestart",
                 "options": {
                     "hKey": "HKEY_CURRENT_USER",
                     "path": "Control Panel\\Cursors",
@@ -3015,6 +3038,7 @@
         "settingsHandlers": {
             "configuration": {
                 "type": "gpii.settingsHandlers.XMLHandler",
+                "liveness": "manualRestart",
                 "options": {
                     "filename": "C:\\Sociable\\Configuration.xml",
                     "encoding": "utf-8",
@@ -3100,6 +3124,7 @@
         "settingsHandlers": {
             "configuration": {
                 "type": "gpii.settingsHandlers.webSockets",
+                "liveness": "live",
                 "options": {
                     "path": "net.gpii.uioPlus"
                 },
@@ -3216,6 +3241,261 @@
             }
         ]
     },
+
+    "com.microsoft.windows.classicShell": {
+        "name": "ClassicShell start menu replacement",
+        "contexts": {
+            "os": [
+                {
+                    "id": "win32",
+                    "version": ">=5.0"
+                }
+            ]
+        },
+        "settingsHandlers": {
+            "configuration": {
+                "type": "gpii.windows.registrySettingsHandler",
+                "options": {
+                    "hKey": "HKEY_CURRENT_USER",
+                    "path": "SOFTWARE\\IvoSoft\\ClassicStartMenu\\Settings",
+                    "dataTypes": {
+                        "MenuStyle": "REG_SZ",
+                        "SkipMetro": "REG_DWORD",
+                        "SkinW7": "REG_SZ"
+                    }
+                },
+                "supportedSettings": {
+                    "MenuStyle" : {},
+                    "SkipMetro" : {},
+                    "SkinW7" : {}
+                },
+                "capabilities": [],
+                "capabilitiesTransformations": {}
+            }
+        },
+        "configure": [
+            "settings.configuration",
+        ],
+        "restore": [
+            "settings.configuration",
+        ],
+        "start": [
+            {
+                "type": "gpii.windows.execWaitAndClose",
+                "command": "C:\\Program Files\\Classic Shell\\ClassicStartMenu.exe",
+                "processToClose": "explorer.exe",
+                "options": {
+                    "processToWait": "ClassicStartMenu.exe",
+                    "processToWaitState": "Open",
+                    "restart": true,
+                    "retries": 5
+                }
+            }
+        ],
+        "stop": [
+            {
+                "type": "gpii.windows.execWaitAndClose",
+                "command": "C:\\Program Files\\Classic Shell\\ClassicStartMenu.exe",
+                "args": ["-exit"],
+                "processToClose": "explorer.exe",
+                "options": {
+                    "processToWait": "ClassicStartMenu.exe",
+                    "processToWaitState": "Close",
+                    "restart": true,
+                    "retries": 5
+                }
+            }
+        ],
+        "isInstalled": [
+            {
+                "type": "gpii.deviceReporter.registryKeyExists",
+                "hKey": "HKEY_LOCAL_MACHINE",
+                "path": "64:Software\\IvoSoft\\ClassicShell",
+                "subPath": "Path",
+                "dataType": "REG_SZ"
+            }
+        ]
+    },
+
+    "com.microsoft.windows.taskbar": {
+        "name": "Configure search field from Windows 10 Taskbar",
+        "contexts": {
+            "os": [
+                {
+                    "id": "win32",
+                    "version": ">=5.0"
+                }
+            ]
+        },
+        "settingsHandlers": {
+            "configuration" : {
+                "type": "gpii.windows.registrySettingsHandler",
+                "options": {
+                    "hKey": "HKEY_CURRENT_USER",
+                    "path": "Software\\Microsoft\\Windows\\CurrentVersion\\Search",
+                    "dataTypes": {
+                        "SearchboxTaskbarMode": "REG_DWORD",
+                    }
+                },
+                "supportedSettings": {
+                    "SearchboxTaskbarMode": {}
+                },
+                "capabilities": [],
+                "capabilitiesTransformations": {}
+            }
+        },
+        "configure": [
+            "settings.configuration",
+        ],
+        "restore": [
+            "settings.configuration",
+        ],
+        "isInstalled": [
+            {
+                "type": "gpii.deviceReporter.alwaysInstalled"
+            }
+        ]
+    },
+
+    "com.microsoft.windows.wallpaper": {
+        "name": "Set a new Windows wallpaper",
+        "contexts": {
+            "OS": [
+                {
+                    "id": "win32",
+                    "version": ">=5.0"
+                }
+            ]
+        },
+        "settingsHandlers": {
+            "configure": {
+                "type": "gpii.windows.spiSettingsHandler",
+                "options": {
+                    "getAction": "SPI_GETDESKWALLPAPER",
+                    "setAction": "SPI_SETDESKWALLPAPER",
+                    "uiParam": 260,
+                    "pvParam": {
+                        "type": "array",
+                        "valueType": "TCHAR",
+                        "length": 260
+                    },
+                    "fWinIni": "SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE",
+                    "verifySettings": true
+                },
+                "supportedSettings": {
+                    "Wallpaper": {}
+                },
+                "capabilities": [
+                    "http://registry\\.gpii\\.net/common/wallpaper"
+                ],
+                "capabilitiesTransformations": {
+                    "Wallpaper": {
+                        "transform": {
+                            "type": "fluid.transforms.value",
+                            "inputPath": "http://registry\\.gpii\\.net/common/wallpaper",
+                            "outputPath": "value"
+                        },
+                        "path": {
+                            "transform": {
+                                "type": "fluid.transforms.literalValue",
+                                "input": "pvParam"
+                            }
+                        }
+                    }
+                },
+                "inverseCapabilitiesTransformations": {
+                    "http://registry\\.gpii\\.net/common/wallpaper": "Wallpaper.value"
+                }
+            },
+        },
+        "configure": [
+            "settings.configure",
+        ],
+        "restore": [
+            "settings.configure",
+        ],
+        "isInstalled": [
+            {
+                "type": "gpii.deviceReporter.alwaysInstalled"
+            }
+        ]
+    },
+
+    "com.microsoft.windows.taskView": {
+        "name": "Configures Windows 10 TaskView button",
+        "contexts": {
+            "OS": [
+                {
+                    "id": "win32",
+                    "version": ">=5.0"
+                }
+            ]
+        },
+        "settingsHandlers": {
+            "configuration": {
+                "type": "gpii.windows.registrySettingsHandler",
+                "options": {
+                    "hKey": "HKEY_CURRENT_USER",
+                    "path": "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
+                    "dataTypes": {
+                        "ShowTaskViewButton": "REG_DWORD",
+                    }
+                },
+                "supportedSettings": {
+                    "ShowTaskViewButton": {}
+                },
+                "capabilities": [],
+                "capabilitiesTransformations": {}
+            }
+        },
+        "configure": [
+            "settings.configuration",
+        ],
+        "restore": [
+            "settings.configuration",
+        ],
+        "isInstalled": [
+            {
+                "type": "gpii.deviceReporter.alwaysInstalled"
+            }
+        ]
+    },
+
+    "com.microsoft.windows.lockScreen": {
+        "name": "Disables Windows 10 lockscreen",
+        "contexts": {
+            "OS": [
+                {
+                    "id": "win32",
+                    "version": ">=5.0"
+                }
+            ]
+        },
+        "settingsHandlers" : {
+            "configuration": {
+                "type": "gpii.windows.registrySettingsHandler",
+                "options": {
+                    "hKey": "HKEY_CURRENT_USER",
+                    "path": "Policies\\Microsoft\\Windows\\Personalization",
+                    "dataTypes": {
+                        "NoLockScreen": "REG_DWORD",
+                    }
+                },
+                "supportedSettings": {
+                    "NoLockScreen": {}
+                },
+                "capabilities": [],
+                "capabilitiesTransformations": {}
+            }
+        },
+        "configure": [
+            "settings.configuration",
+        ],
+        "restore": [
+            "settings.configuration",
+        ],
+    },
+
     "net.gpii.test.speechControl": { // This solution does not exist in real life and has been added strictly for user testing/demoing
         "name": "GPII Test solution for speech control of the computer",
         "contexts": {
@@ -3246,5 +3526,293 @@
             }
         ],
         "isRunning": []
+    },
+
+    "com.microsoft.windows.titleBarColor": {
+        "name": "Change the Windows 10 native windows titlebar color",
+        "contexts": {
+            "OS": [
+                {
+                    "id": "win32",
+                    "version": ">=5.0"
+                }
+            ]
+        },
+        "settingsHandlers": {
+            "configuration": {
+                "type": "gpii.windows.registrySettingsHandler",
+                "options": {
+                    "hKey": "HKEY_CURRENT_USER",
+                    "path": "SOFTWARE\\Microsoft\\Windows\\DWM",
+                    "dataTypes": {
+                        "ColorPrevalence": "REG_DWORD",
+                    }
+                },
+                "supportedSettings": {
+                    "ColorPrevalence": {}
+                },
+                "capabilities": [],
+                "capabilitiesTransformations": {}
+            }
+        },
+        "configure": [
+            "settings.configuration",
+        ],
+        "restore": [
+            "settings.configuration",
+        ],
+        "isInstalled": [
+            {
+                "type": "gpii.deviceReporter.alwaysInstalled"
+            }
+        ]
+    },
+
+    "com.microsoft.windows.taskBarColor": {
+        "name": "Windows 7 look and feel for Windows 10",
+        "contexts": {
+            "OS": [
+                {
+                    "id": "win32",
+                    "version": ">=5.0"
+                }
+            ]
+        },
+        "settingsHandlers": {
+            "configuration": {
+                "type": "gpii.windows.registrySettingsHandler",
+                "options": {
+                    "hKey": "HKEY_CURRENT_USER",
+                    "path": "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize",
+                    "dataTypes": {
+                        "ColorPrevalence": "REG_DWORD",
+                    }
+                },
+                "supportedSettings": {
+                    "ColorPrevalence": {}
+                },
+                "capabilities": [],
+                "capabilitiesTransformations": {}
+            }
+        },
+        "configure": [
+            "settings.configuration",
+        ],
+        "restore": [
+            "settings.configuration",
+        ],
+        "isInstalled": [
+            {
+                "type": "gpii.deviceReporter.alwaysInstalled"
+            }
+        ]
+    },
+
+    "com.microsoft.windows.taskBarAppsVisibleInTabletMode": {
+        "name": "Show or hide apps in taskbar inside tablet mode",
+        "contexts": {
+            "OS": [
+                {
+                    "id": "win32",
+                    "version": ">=5.0"
+                }
+            ]
+        },
+        "settingsHandlers": {
+            "configuration": {
+                "type": "gpii.windows.registrySettingsHandler",
+                "options": {
+                    "hKey": "HKEY_CURRENT_USER",
+                    "path": "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
+                    "dataTypes": {
+                        "TaskbarAppsVisibleInTabletMode": "REG_DWORD",
+                    }
+                },
+                "supportedSettings": {
+                    "TaskbarAppsVisibleInTabletMode": {},
+                },
+                "capabilities": [],
+                "capabilitiesTransformations": {}
+            },
+        },
+        "configure": [
+            "settings.configuration",
+        ],
+        "restore": [
+            "settings.configuration",
+        ],
+        "isInstalled": [
+            {
+                "type": "gpii.deviceReporter.alwaysInstalled"
+            }
+        ]
+    },
+
+    "com.microsoft.windows.taskBarAutoHideInTabletMode": {
+        "name": "Turn off or on taskbar autohide in tablet mode",
+        "contexts": {
+            "OS": [
+                {
+                    "id": "win32",
+                    "version": ">=5.0"
+                }
+            ]
+        },
+        "settingsHandlers": {
+            "configuration": {
+                "type": "gpii.windows.registrySettingsHandler",
+                "options": {
+                    "hKey": "HKEY_CURRENT_USER",
+                    "path": "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
+                    "dataTypes": {
+                        "TaskbarAutoHideInTabletMode": "REG_DWORD"
+                    }
+                },
+                "supportedSettings": {
+                    "TaskbarAutoHideInTabletMode": {},
+                },
+                "capabilities": [],
+                "capabilitiesTransformations": {}
+            },
+        },
+        "configure": [
+            "settings.configuration",
+        ],
+        "restore": [
+            "settings.configuration",
+        ],
+        "isInstalled": [
+            {
+                "type": "gpii.deviceReporter.alwaysInstalled"
+            }
+        ]
+    },
+
+    "com.microsoft.windows.customStartMenu": {
+        "name": "Start menu for Windows 10 Simplification",
+        "contexts": {
+            "OS": [
+                {
+                    "id": "win32",
+                    "version": ">=5.0"
+                }
+            ]
+        },
+        "settingsHandlers": {
+            "configureMenu": {
+                "type": "gpii.windows.startMenuLayoutHandler",
+                "options": {},
+                "supportedSettings": {
+                    "FilePath": {},
+                },
+                "capabilities": [],
+                "capabilitiesTransformations": {}
+            },
+            "configuration": {
+                "type": "gpii.windows.registrySettingsHandler",
+                "options": {
+                    "hKey": "HKEY_CURRENT_USER",
+                    "path": "Software\\Policies\\Microsoft\\Windows\\Explorer",
+                    "dataTypes": {
+                        "ForceStartSize": "REG_DWORD",
+                    }
+                },
+                "supportedSettings": {
+                },
+                "capabilities": [],
+                "capabilitiesTransformations": {}
+            },
+        },
+        "configure": [
+            "settings.configureMenu",
+            "settings.configuration",
+        ],
+        "restore": [
+            "settings.configureMenu",
+            "settings.configuration",
+        ],
+        "start": [
+        //    {
+        //        "type": "gpii.windows.closeProcessByName",
+        //        "filename": "ShellExperienceHost.exe"
+        //    }
+        ],
+        "stop": [
+        //    {
+        //        "type": "gpii.windows.closeProcessByName",
+        //        "filename": "ShellExperienceHost.exe"
+        //    }
+        ],
+        "isInstalled": [
+            {
+                "type": "gpii.deviceReporter.alwaysInstalled"
+            }
+        ]
+    },
+
+    "com.microsoft.windows.immersiveMode": {
+        "name": "Windows 10 Simplification",
+        "contexts": {
+            "OS": [
+                {
+                    "id": "win32",
+                    "version": ">=5.0"
+                }
+            ]
+        },
+        "settingsHandlers": {
+            "configuration": {
+                "type": "gpii.windows.registrySettingsHandler",
+                "options": {
+                    "hKey": "HKEY_CURRENT_USER",
+                    "path": "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ImmersiveShell",
+                    "dataTypes": {
+                        "TabletMode": "REG_DWORD",
+                        "SignInMode": "REG_DWORD",
+                        "ConvertibleSlateModePromptPreference": "REG_DWORD"
+                    }
+                },
+                "supportedSettings": {
+                    "TabletMode" : {},
+                    "SignInMode" : {},
+                    "ConvertibleSlateModePromptPreference" : {}
+                },
+                "capabilities": [],
+                "capabilitiesTransformations": {}
+            },
+        },
+        "configure": [
+            "settings.configuration",
+        ],
+        "restore": [
+            "settings.configuration",
+        ],
+        "start": [
+            {
+                "type": "gpii.windows.tabletMode.setTabletMode",
+                "mode": 1
+            }
+            // {
+            //     "type": "gpii.launch.exec",
+            //     "command": "Powershell.exe -ExecutionPolicy Bypass \
+            //                -File \"%homedrive%%homepath%\\AppData\\Local\\GPII\\scripts\\ImmersiveShellSetter.ps1\""
+            // }
+        ],
+        "stop": [
+            // {
+            //     "type" : "gpii.launch.exec",
+            //     "command": "Powershell.exe -ExecutionPolicy Bypass \
+            //                 -File \"%homedrive%%homepath%\\AppData\\Local\\GPII\\scripts\\ImmersiveShellRecover.ps1\""
+            // }
+            {
+                "type": "gpii.windows.tabletMode.setTabletMode",
+                "mode": 0
+            }
+        ],
+        "isInstalled": [
+            {
+                "type": "gpii.deviceReporter.alwaysInstalled"
+            }
+        ]
     }
 }
